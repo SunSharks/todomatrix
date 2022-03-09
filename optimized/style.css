@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #282525;
+    background-color: #e3e3e3;
+}
+
+div.todo {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px repeat(3, 1fr);
+    grid-template-rows: 80px repeat(3, 1fr);
+    gap: 16px;
+    padding: 20px;
+}
