@@ -11,12 +11,45 @@ body {
     background-color: #e3e3e3;
 }
 
+div.colheader {
+  text-align: center;
+}
+
+div.rowheader {
+  display: flex;
+  align-items: center;
+}
+
+
 div.todo {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 80px repeat(3, 1fr);
-    grid-template-rows: 80px repeat(3, 1fr);
+    grid-template-columns: 40px repeat(3, 1fr);
+    grid-template-rows: 20px repeat(3, 1fr);
     gap: 16px;
     padding: 20px;
+}
+
+div.todo:hover textarea {
+  background-color: #ccc;
+  transition-duration: 500ms;
+  transition-property: background-color width height;
+}
+
+div.todo:hover textarea:hover {
+  background-color: #fff;
+}
+
+textarea:focus {
+  position: absolute;
+  /* padding: 10px;
+  margin: 10px; */
+  top: 40px;
+  bottom: 100vh;
+  left: 40px;
+  right: 100vw;
+  width: 300%;
+  height: 300vh;
+  background-color: #fff;
 }
