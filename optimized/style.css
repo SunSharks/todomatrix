@@ -6,9 +6,23 @@
 
 body {
     margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Roboto', sans-serif;
     color: #282525;
     background-color: #e3e3e3;
+}
+
+.fullscreen {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
 }
 
 div.colheader {
@@ -17,6 +31,10 @@ div.colheader {
 
 div.rowheader {
   display: flex;
+  text-align: center;
+  /* text-orientation: upright;
+  writing-mode: vertical-lr; */
+  width: 1em;
   align-items: center;
 }
 
@@ -25,7 +43,7 @@ div.todo {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 40px repeat(3, 1fr);
+    grid-template-columns: 20px repeat(3, 1fr);
     grid-template-rows: 20px repeat(3, 1fr);
     gap: 16px;
     padding: 20px;
@@ -38,18 +56,21 @@ div.todo:hover textarea {
 }
 
 div.todo:hover textarea:hover {
-  background-color: #fff;
+  background-color: #rgb(255, 255, 0);
+  /* opacity: 0.5; */
 }
 
 textarea:focus {
-  position: absolute;
-  /* padding: 10px;
-  margin: 10px; */
-  top: 40px;
-  bottom: 100vh;
-  left: 40px;
-  right: 100vw;
-  width: 300%;
-  height: 300vh;
+  position: relative;
+   /* padding: 10px; */
+  margin: 10px;
+  /* top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  width: 200%;
+  height: 200%;
   background-color: #fff;
+  opacity:  1;
+
 }
